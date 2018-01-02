@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/goods-info/goods-info"
+    "pages/goods-info/goods-info",
+    "pages/publish/publish"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,7 +17,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/publish/publish",
         "text": "发布"
       },
       {

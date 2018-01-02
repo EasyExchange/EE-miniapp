@@ -1,0 +1,26 @@
+<!--pages/publish/publish.wxml-->
+<view class='wrapper'>
+<form bindsubmit='formSubmit'>
+<input class='input' placeholder="标题"></input>
+<textarea class='textarea' placeholder="描述一下你的闲置"></textarea>
+<view class='upload-img-wrapper'>
+<view class="page-body-info">
+  <block wx:if="{{imageSrc}}">
+    <image src="{{imageSrc}}" class="image" mode="aspectFit"></image>
+  </block>
+
+  <block wx:else>
+    <view class="image-plus image-plus-nb" bindtap="chooseImage">
+      <view class="image-plus-horizontal"></view>
+      <view class="image-plus-vertical"></view>
+    </view>
+    <view class="image-plus-text">选择图片</view>
+  </block>
+</view>
+</view>
+<input class='address' placeholder='地址'></input>
+<input class='price' placeholder='价格'></input>
+<button formType="submit">Submit</button>
+<button formType="reset">Reset</button>
+</form>
+</view>

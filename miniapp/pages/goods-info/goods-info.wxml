@@ -1,9 +1,11 @@
 <!--pages/goods-info/goods-info.wxml-->
 <view class='wrapper'>
+<scroll-view>
 <users-intro user='{{good.user}}'></users-intro>
 <view class='title'>{{good.name}}</view>
 <view class='details'>{{good.details}}</view>
 <image src='{{good.img}}' class='image'></image>
+</scroll-view>
 </view>
 <view class='tab-bar'>
   <view class='comment'>留言</view>
