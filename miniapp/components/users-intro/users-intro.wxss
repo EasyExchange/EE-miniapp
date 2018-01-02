@@ -1,0 +1,31 @@
+/* components/users-intro/users-intro.wxss */
+.users-intro-wrapper{
+  position: relative;
+  width: 500rpx;
+  height: 100rpx;
+}
+.avatar{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50%;
+  background: #31b0d5;
+  color: #FFF;
+}
+.user-name{
+  display: inline-block;
+  position: absolute;
+  height: 50rpx;
+  padding-left: 10rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.user-address{
+  display: inline-block;
+  position: absolute;
+  height: 50rpx;
+  padding-left: 10rpx;
+  bottom: 0;
+  font-size: 24rpx;
+  color: #666;
+}

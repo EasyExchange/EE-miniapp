@@ -1,4 +1,10 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "wxc-icon" : "/packages/@minui/wxc-icon/dist/index",
+    "wxc-price" : "/packages/@minui/wxc-price/dist/index",
+    "wxc-elip" : "/packages/@minui/wxc-elip/dist/index",
+    "wxc-avatar" : "/packages/@minui/wxc-avatar/dist/index",
+    "users-intro" : "/components/users-intro/users-intro"
+  }
 }

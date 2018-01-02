@@ -1,0 +1,6 @@
+<!--components/users-intro/users-intro.wxml-->
+<view class='users-intro-wrapper'>
+  <wxc-avatar class='avatar'>nico</wxc-avatar>
+  <view class='user-name'>{{user.name}}</view>
+  <view class='user-address'>{{user.address}}</view>
+</view>

@@ -1,8 +1,0 @@
-<!--pages/home/home.wxml-->
-<view class="fixed-wrapper">
-  <view class='fixed-search'></view>
-  <view class='fixed-class'></view>
-</view>
-<view>
-  <goods-card></goods-card>
-</view>

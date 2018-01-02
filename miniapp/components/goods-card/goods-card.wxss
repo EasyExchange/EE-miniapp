@@ -1,1 +1,49 @@
 /* components/goods-card/goods-card.wxss */
+.card-wrapper{
+  width: 100vh;
+  height: 500rpx;
+  padding: 50rpx;
+  margin-bottom: 20rpx; 
+  background-color: #FFF;
+}
+.card-userinfo{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+}
+.card-userinfo .card-avatar{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50%;
+  background: #31b0d5;
+  color: #FFF;
+}
+.card-userinfo .card-username{
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 10rpx;
+}
+.card-userinfo .card-price{
+  display: inline-block;
+  position: absolute;
+  right: 50rpx;
+  color: #ff4422;
+}
+.card-img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.card-title{
+  width: 100%;
+  height: 100rpx;
+}
+.card-address{
+  width: 100%;
+  height: 50rpx;
+}
+.card-arrow{
+  position: absolute;
+  right: 50rpx;
+}

@@ -8,3 +8,21 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.color-main{
+  color: #FF0077;
+}
+.color-control{
+  color: #FF5777;
+}
+.color-title{
+  color: #333333;
+}
+.color-subtitle{
+  color: #666666;
+}
+.color-background{
+  color: #EFEFEF;
+}
+.color-hint{
+  color: #FFE8EE;
+}

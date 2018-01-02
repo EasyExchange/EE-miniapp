@@ -1,2 +1,11 @@
 <!--components/goods-card/goods-card.wxml-->
-<text>components/goods-card/goods-card.wxml</text>
+<view class='card-wrapper' bindtap='showDetail'>
+  <view class='card-userinfo'>
+    <users-intro user="{{good.user}}"></users-intro>
+    <wxc-price class="card-price" value="{{good.price}}" decimal="small"></wxc-price>
+  </view>
+  <image src='{{good.img}}' class='card-img'></image>
+  <wxc-elip class='card-title color-title'>{{good.name}}</wxc-elip>
+  <view class='card-address color-subtitle'>来自{{good.location}}</view>
+  <wxc-icon size="50" type="arrow-right" class='card-arrow'></wxc-icon>
+</view>

@@ -1,27 +1,21 @@
-// pages/home/home.js
+// pages/goods-info/goods-info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    goodList:[
-      {
-        id:1,
-        name:'iphoneX',
-        img:'',
-        price:100,
-        time:'2017-12-27',
-        location:''
-      }
-    ]
+  good :  {
+  }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      good: wx.getStorageSync('nowGood')
+    })
   },
 
   /**
