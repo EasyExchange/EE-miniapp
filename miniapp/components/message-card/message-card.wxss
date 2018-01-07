@@ -1,0 +1,8 @@
+/* components/message-card/message-card.wxss */
+.avatar{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  background: #31b0d5;
+  color: #FFF;
+}

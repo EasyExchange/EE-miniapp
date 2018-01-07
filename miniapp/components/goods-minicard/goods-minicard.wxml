@@ -1,0 +1,7 @@
+<!--components/goods-minicard/goods-minicard.wxml-->
+<view class='wrapper'>
+  <image src='{{good.img}}' class='img'></image>
+  <view class='name'>{{good.name}}</view>
+  <view class='address'>来自{{good.location}}</view>
+  <wxc-price class="price" value="{{good.price}}" decimal="small"></wxc-price>
+</view>

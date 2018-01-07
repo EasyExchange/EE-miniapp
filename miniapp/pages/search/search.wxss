@@ -1,8 +1,21 @@
-/* components/search-button/search-button.wxss */
 page{
     background-color: #F8F8F8;
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
 }
 .searchbar-result{
     margin-top: 0;
@@ -81,6 +94,6 @@ page{
 .weui-search-bar__cancel-btn {
     margin-left: 10px;
     line-height: 28px;
-    color: #FF5777;
+    color: #09BB07;
     white-space: nowrap;
 }

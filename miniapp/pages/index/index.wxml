@@ -1,7 +1,11 @@
 <!--pages/home/home.wxml-->
 <view class="fixed-wrapper">
-  <view class='fixed-search'></view>
-  <view class='fixed-class'></view>
+  <view class='fixed-search'>
+  <search></search>
+  </view>
+  <view class='fixed-class'>
+    <view bindtap='toClass'>分类</view>
+  </view>
 </view>
 <view class='main-page'>
   <view wx:for="{{goodList}}" wx:for-item="good" wx:key="id">

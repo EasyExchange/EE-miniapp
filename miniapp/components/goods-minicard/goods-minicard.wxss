@@ -1,0 +1,24 @@
+/* components/goods-minicard/goods-minicard.wxss */
+.wrapper{
+  position: relative;
+  padding: 30rpx;
+  background-color: #FFF;
+}
+.img{
+  width: 250rpx;
+  height: 250rpx;
+}
+.name{
+  position: absolute;
+  top: 30rpx;
+  left: 280rpx;
+}
+.address{
+  position: absolute;
+  bottom: 30rpx;
+  left: 280rpx;
+}
+.price{
+  position: absolute;
+  right: 20rpx;
+}

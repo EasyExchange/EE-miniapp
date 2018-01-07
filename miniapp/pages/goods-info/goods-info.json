@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "users-intro" : "/components/users-intro/users-intro"
+    "users-intro" : "/components/users-intro/users-intro",
+    "message-card": "/components/message-card/message-card"
     },
   "disableScroll": "true"
 }

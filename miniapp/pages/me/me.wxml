@@ -1,0 +1,8 @@
+<!--pages/me/me.wxml-->
+<view class='wrapper'>
+  <users-intro user='{{user}}'></users-intro>
+  <view bindtap='toMyGoods'>我发布的物品</view>
+  <view bindtap='toMessage'>我的消息</view>
+  <view>我的收藏</view>
+  <view bindtap='toSet'>设置</view>
+</view>

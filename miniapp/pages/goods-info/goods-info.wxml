@@ -5,6 +5,9 @@
 <view class='title'>{{good.name}}</view>
 <view class='details'>{{good.details}}</view>
 <image src='{{good.img}}' class='image'></image>
+<view class='message-wrapper'>
+<message-card></message-card>
+</view>
 </scroll-view>
 </view>
 <view class='tab-bar'>

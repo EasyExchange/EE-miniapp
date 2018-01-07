@@ -1,0 +1,7 @@
+<!--components/message-card/message-card.wxml-->
+<view class='wrapper'>
+  <wxc-avatar class='avatar'>gloria</wxc-avatar>
+  <view class='name'>gloria</view>
+  <view class='content'>Hi</view>
+  <view class='time'>17:30</view>
+</view>

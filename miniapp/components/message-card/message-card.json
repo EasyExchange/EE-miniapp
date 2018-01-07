@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wxc-avatar": "/packages/@minui/wxc-avatar/dist/index"
+  }
+}

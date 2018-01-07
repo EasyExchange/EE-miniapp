@@ -1,6 +1,15 @@
 /* pages/home/home.wxss */
 /* @import "/app.wxss"; */
 .main-page{
+  padding-top: 48px;
   height: 100vh;
   background-color: #EEE;
+}
+.fixed-search{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.fixed-class{
+  position: fixed;
 }
