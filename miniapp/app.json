@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/my-goods/my-goods",
-    "pages/index/index",
     "pages/goods-info/goods-info",
-    "pages/publish/publish",
     "pages/me/me",
+    "pages/index/index",
+    "pages/publish/publish",
     "pages/message/message",
     "pages/user-set/user-set",
     "pages/chat/chat",
     "pages/search/search",
-    "pages/classify/classify"
+    "pages/classify/classify",
+    "pages/my-goods/my-goods"
   ],
   "window": {
     "backgroundTextStyle": "light",

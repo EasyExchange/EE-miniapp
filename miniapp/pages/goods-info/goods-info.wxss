@@ -1,11 +1,16 @@
 /* pages/goods-info/goods-info.wxss */
 .wrapper{
   padding: 30rpx;
-  background-color: #EEE;
-  height: 100vh;
+}
+.user-info{
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #EFEFEF;
+}
+.price{
+  padding: 30rpx 0;
+  color: #ff4422;
 }
 .title{
-  margin: 30rpx 0;
   font-size: 50rpx;
   color: #333;
 }
@@ -16,12 +21,30 @@
 }
 .image{
   width: 100%;
+  margin-bottom: 20rpx;
+}
+.message-wrapper{
+  border-top: 30rpx solid #EFEFEF;
+}
+.message-title{
+  padding: 30rpx 30rpx;
+  font-size: 36rpx;
+  border-bottom: 1rpx solid #EFEFEF;
+}
+.message-content{
+  padding: 30rpx 30rpx;
 }
 .tab-bar{
   position: fixed;
   bottom: 0;
   width: 100%;
   border-top: 1rpx solid #DDD;
-  height: 120rpx;
+  height: 100rpx;
   background-color: #FFF;
+}
+.comment{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
 }

@@ -3,6 +3,7 @@
   position: relative;
   padding: 30rpx;
   background-color: #FFF;
+  border: 1rpx solid #EEE;
 }
 .img{
   width: 250rpx;
@@ -10,12 +11,12 @@
 }
 .name{
   position: absolute;
-  top: 30rpx;
+  top: 60rpx;
   left: 280rpx;
 }
 .address{
   position: absolute;
-  bottom: 30rpx;
+  bottom: 60rpx;
   left: 280rpx;
 }
 .price{

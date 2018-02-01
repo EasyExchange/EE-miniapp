@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view class="fixed-wrapper">
   <view class='fixed-search'>
-  <search></search>
+  <search class='index-search'></search>
   </view>
   <view class='fixed-class'>
     <view bindtap='toClass'>分类</view>

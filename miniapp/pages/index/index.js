@@ -43,7 +43,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // //当小程序首页加载时发送请求
+    // wx.request({
+    //   url: '/index', //首页的接口地址（这里你定好每个请求的入口告诉我就行）
+    //   method: 'GET',//默认就为get请求
+    //   data: {//其实首页请求不需要什么数据的，这里是一个例子，数据也是这样以json的形式发给后端
+    //     userId : '007'
+    //   },
+    //   header: {//请求头
+    //     'content-type': 'application/json' // 默认请求json
+    //   },
+    //   success: function (res) {//以上就是最简单的http请求，当服务器收到请求并成功响应后小程序这里的success方法会执行，这个res参数就是服务器返回的结果
+    //     console.log(res.data)
+    //   }
+    // })
   },
 
   /**
