@@ -9,15 +9,6 @@
                 <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
               </view>
             </block>
-            <view class="weui-uploader__file">
-              <image class="weui-uploader__img" src="/images/avatar.jpeg" mode="aspectFill" />
-            </view>
-            <view class="weui-uploader__file">
-              <image class="weui-uploader__img" src="/images/avatar.jpeg" mode="aspectFill" />
-            </view>
-            <view class="weui-uploader__file">
-              <image class="weui-uploader__img" src="/images/avatar.jpeg" mode="aspectFill" />
-            </view>
           </view>
           <view class="weui-uploader__input-box">
             <view class="weui-uploader__input" bindtap="chooseImage"></view>

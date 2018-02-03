@@ -5,14 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    goods:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let self = this
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/me/posted',
+      data: {
+        user_id:1
+      },
+      success: function(res) {
+        self.setData({
+          goods:res.data
+        })
+      }
+    })
   },
 
   /**

@@ -1,2 +1,4 @@
 <!--pages/my-goods/my-goods.wxml-->
-<goods-minicard></goods-minicard>
+<block wx:for="{{goods}}" wx:for-item="good" wx:key="id">
+    <goods-minicard good="{{good}}"></goods-minicard>
+</block>

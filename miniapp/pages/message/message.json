@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "message-card": "/components/message-card/message-card"
+    "message-minicard": "/components/message-minicard/message-minicard"
   }
 }

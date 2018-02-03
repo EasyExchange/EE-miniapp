@@ -5,14 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    messages:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let app = getApp()
+    let globalData = app.globalData
+    let items = globalData.items
+    let users = globalData.users
+    let self = this
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/me/message',
+      data: {
+        user_id:1
+      },
+      success: function(res) {
+        let messageData = res.data
+        let newMessageData = messageData.map(v=>{
+          let newV = v
+          newV.item = items[v.item_id-1]
+          newV.user = users[v.sender_id-1]
+          return newV
+        })
+        console.log(newMessageData)
+        self.setData({
+          messages:newMessageData
+        })
+      }
+    })
   },
 
   /**

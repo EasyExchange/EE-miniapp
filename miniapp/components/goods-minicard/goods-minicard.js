@@ -7,18 +7,6 @@ Component({
     good: {
       type: null,
       value: {
-        id: 1,
-        name: 'Pikachu',
-        img: '/images/pikachu.jpeg',
-        price: 1000,
-        time: '2017-12-27',
-        location: 'UCAS',
-        user: {
-          id: 1,
-          name: '郭嘉大战绿巨人',
-          headphoto: '',
-          address: ''
-        }
       }
     }
   },

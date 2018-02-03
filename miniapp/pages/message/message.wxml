@@ -1,2 +1,4 @@
 <!--pages/message/message.wxml-->
-<message-card></message-card>
+<view class='message-wrapper' wx:for="{{messages}}" wx:for-item="message" wx:key="id">
+  <message-minicard message="{{message}}"></message-minicard>
+</view>

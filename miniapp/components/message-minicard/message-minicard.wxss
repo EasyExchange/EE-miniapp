@@ -1,0 +1,49 @@
+/* components/message-minicard/message-minicard.wxss */
+.wrapper{
+  position: relative;
+  padding: 0 20rpx; 
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 1rpx solid #EFEFEF;
+}
+.avatar{
+  display: inline-block;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50%;
+  background: #31b0d5;
+  color: #FFF;
+}
+.content-wrapper{
+  display: inline-block;
+  padding-left: 120rpx;
+  width: 400rpx;
+}
+.name{
+  display: inline-block;
+  width: 400rpx;
+  font-size: 28rpx;
+}
+.content{
+  display: inline-block;
+  width: 400rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #999;
+}
+.time{
+  display: inline-block;
+  font-size: 22rpx;
+  color: #999;
+}
+.img{
+  display: inline-block;
+  position: absolute;
+  right: 50rpx;
+  top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

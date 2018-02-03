@@ -12,7 +12,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // wx.request({
+    //   url: 'https://eeserver.herokuapp.com/new', 
+    //   method: 'POST',
+    //   data: {
+    //     user_id:1,
+    //     name: 'switch',
+    //     second_price: 2200,
+    //     original_price: 3000,
+    //     detail:'全新任天堂Switch，看上的快带走吧'
+    //   },
+    //   success: function(res) {
+    //     console.log(res.data)
+    //   }
+    // })
   },
 
   /**

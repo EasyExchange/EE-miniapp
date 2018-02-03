@@ -4,16 +4,17 @@
     <users-intro user='{{good.user}}'></users-intro>
   </view>
   <view class="price">
-    <wxc-price value="{{good.price}}" decimal="small"></wxc-price>
+    <wxc-price value="{{good.second_price}}" decimal="small"></wxc-price>
   </view>
-  <!-- <view class='title'>{{good.name}}</view> -->
-  <view class='details'>{{good.details}}</view>
-  <image src='{{good.img}}' class='image'></image>
+  <view class='details'>{{good.detail}}</view>
+  <image src='' class='image'></image>
 </view>
 <view class='message-wrapper'>
   <view class='message-title'>留言</view>
   <view class='message-content'>
-    <message-card></message-card>
+    <block wx:for="{{good.messages}}" wx:for-item="message" wx:key="id">
+      <message-card message='{{message}}'></message-card>
+    </block>
   </view>
 </view>
 <view class='tab-bar'>

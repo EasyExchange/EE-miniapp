@@ -5,12 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user : {
-      id : 1,
-      name : '郭嘉大战绿巨人',
-      avatar : 'avatar.jpeg',
-      phone : 111111111,
-      address : '西区5272'
+    userInfo : {
     }
   },
 
@@ -18,7 +13,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let app = getApp()
+    let globalData = app.globalData
+    let userInfo = globalData.userInfo
+    this.setData({
+      userInfo : {
+        ...this.userInfo,
+        name : userInfo.nickName,
+        avatarUrl: userInfo.avatarUrl
+      }
+    })
   },
 
   /**

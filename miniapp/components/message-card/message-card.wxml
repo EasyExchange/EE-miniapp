@@ -1,7 +1,7 @@
 <!--components/message-card/message-card.wxml-->
 <view class='wrapper'>
-  <wxc-avatar class='avatar'>gloria</wxc-avatar>
-  <view class='name'>gloria</view>
-  <view class='content'>Hi</view>
-  <view class='time'>17:30</view>
+  <wxc-avatar class='avatar'>{{message.sender.name}}</wxc-avatar>
+  <view class='name'>{{message.sender.name}}</view>
+  <view class='content'>{{message.content}}</view>
+  <view class='time'>{{message.created_at}}</view>
 </view>

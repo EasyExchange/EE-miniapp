@@ -1,7 +1,7 @@
 <!--pages/me/me.wxml-->
 <view class='wrapper'>
   <view class='user-info'>
-    <users-intro user='{{user}}'></users-intro>
+    <users-intro user='{{userInfo}}'></users-intro>
   </view>
   <view class='published' bindtap='toMyGoods'>我发布的</view>
   <view class='message' bindtap='toMessage'>我的消息</view>

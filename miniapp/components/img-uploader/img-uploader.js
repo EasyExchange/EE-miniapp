@@ -28,6 +28,7 @@ Component({
           that.setData({
             files: that.data.files.concat(res.tempFilePaths)
           });
+          console.log(that.data.files)
         }
       })
     },

@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+    let self = this
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,8 +33,31 @@ App({
         }
       }
     })
+
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/items',
+      data: {
+      },
+      success: function (res) {
+        let data = res.data ? res.data : []
+        self.globalData.items = data
+      }
+    })
+
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/users',
+      data: {
+      },
+      success: function (res) {
+        let data = res.data ? res.data : []
+        self.globalData.users = data
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    data:1,
+    items:[],
+    users: []
   }
 })

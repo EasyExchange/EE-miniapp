@@ -1,13 +1,12 @@
-// components/message-card/message-card.js
+// components/message-minicard/message-minicard.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
     message:{
-      type : null,
-      value: {
-      }
+      type: null,
+      value:{}
     }
   },
 

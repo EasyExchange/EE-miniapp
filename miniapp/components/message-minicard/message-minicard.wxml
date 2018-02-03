@@ -1,0 +1,10 @@
+<!--components/message-minicard/message-minicard.wxml-->
+<view class='wrapper'>
+  <wxc-avatar class='avatar'>{{message.user.name}}</wxc-avatar>
+  <view class='content-wrapper'>
+    <view class='name'>{{message.user.name}}</view>
+    <view class='content'>{{message.content}}</view>
+    <view class='time'>{{message.created_at}}</view>
+  </view>
+  <image src='/images/pikachu.jpeg' class='img'></image>
+</view>

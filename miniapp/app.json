@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/message/message",
     "pages/goods-info/goods-info",
     "pages/me/me",
-    "pages/index/index",
     "pages/publish/publish",
-    "pages/message/message",
     "pages/user-set/user-set",
     "pages/chat/chat",
     "pages/search/search",
@@ -18,18 +18,26 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color":"#8a8a8a",
+    "selectedColor":"#ff5777",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"images/homepage.png",
+        "selectedIconPath":"images/homepage_fill.png"
       },
       {
         "pagePath": "pages/publish/publish",
-        "text": "发布"
+        "text": "发布",
+        "iconPath":"images/addition.png",
+        "selectedIconPath":"images/addition_fill.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我"
+        "text": "我",
+        "iconPath":"images/mine.png",
+        "selectedIconPath":"images/mine_fill.png"
       }
     ]
   }
