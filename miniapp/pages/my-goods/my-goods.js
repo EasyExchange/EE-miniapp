@@ -1,4 +1,5 @@
 // pages/my-goods/my-goods.js
+const app = getApp()
 Page({
 
   /**
@@ -16,12 +17,21 @@ Page({
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/posted',
       data: {
-        user_id:1
+        id:app.globalData.useId
       },
       success: function(res) {
         self.setData({
           goods:res.data
         })
+      },
+      fail: function(res) {
+        var data = res.data
+        wx.showToast({
+          title: '网络异常，请刷新重试',
+          icon: 'fail',
+          duration: 200
+        })
+        console.log('失败后返回', data)
       }
     })
   },

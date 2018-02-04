@@ -1,7 +1,7 @@
 <!--pages/user-set/user-set.wxml-->
 <view class='wrapper'>
 <form bindsubmit='formSubmit'>
-<view class="page-body-info">
+<!-- <view class="page-body-info">
 <view class='upload-img-wrapper'>
     <view class="image-plus image-plus-nb" bindtap="chooseImage">
       <view class="image-plus-horizontal"></view>
@@ -9,11 +9,10 @@
     </view>
     <view class="image-plus-text">新的头像</view>
 </view>
-</view>
-<input class='input' placeholder="昵称"></input>
-<input class='textarea' placeholder="电话"></input>
-<input class='address' placeholder='地址'></input>
+</view> -->
+<!-- <input class='input' placeholder="昵称" name="name"></input> -->
+<input class='textarea' placeholder="电话" name="tel"></input>
+<input class='address' placeholder='地址' name="address"></input>
 <button formType="submit">保存</button>
-<button formType="reset">重置</button>
 </form>
 </view>

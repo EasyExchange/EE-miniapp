@@ -1,4 +1,5 @@
 // pages/message/message.js
+const app = getApp()
 Page({
 
   /**
@@ -20,7 +21,7 @@ Page({
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/message',
       data: {
-        user_id:1
+        id:app.globalData.useId
       },
       success: function(res) {
         let messageData = res.data

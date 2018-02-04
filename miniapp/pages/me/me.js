@@ -16,11 +16,20 @@ Page({
     let app = getApp()
     let globalData = app.globalData
     let userInfo = globalData.userInfo
-    this.setData({
-      userInfo : {
-        ...this.userInfo,
-        name : userInfo.nickName,
-        avatarUrl: userInfo.avatarUrl
+    let self = this
+
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/users/'+1,
+      success: function (res) {
+        let data = res.data
+        self.setData({
+          userInfo : {
+            name : userInfo.nickName,
+            src: userInfo.avatarUrl,
+            tel : data.tel,
+            address : data.address
+          }
+        })
       }
     })
   },

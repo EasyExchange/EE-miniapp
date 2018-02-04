@@ -1,12 +1,12 @@
 <!--pages/publish/publish.wxml-->
 <view class='wrapper'>
 <form bindsubmit='formSubmit'>
-<input class='input' placeholder="标题"></input>
-<textarea class='textarea' placeholder="描述一下你的闲置"></textarea>
-<input class='address' placeholder='地址'></input>
-<input class='price' placeholder='价格'></input>
+<input class='input' placeholder="标题" name="inputTitle"></input>
+<textarea class='textarea' placeholder="描述一下你的闲置" name="textarea"></textarea>
+<input class='address' placeholder='地址' name="inputAddress"></input>
+<input class='price' placeholder='价格' name="inputPrice"></input>
 <view class='upload-img-wrapper'>
-<img-uploader class="img-up"></img-uploader>
+<img-uploader class="img-up" bind:upfiles="onUploadFiles"></img-uploader>
 </view>
 <view class='btn-wrapper'>
   <button formType="submit" class='sub-btn'>Submit</button>

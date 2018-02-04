@@ -22,6 +22,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              // console.log('res...',res)
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
@@ -33,31 +34,41 @@ App({
         }
       }
     })
-
-    wx.request({
-      url: 'https://eeserver.herokuapp.com/items',
-      data: {
-      },
-      success: function (res) {
-        let data = res.data ? res.data : []
-        self.globalData.items = data
-      }
-    })
-
-    wx.request({
-      url: 'https://eeserver.herokuapp.com/users',
-      data: {
-      },
-      success: function (res) {
-        let data = res.data ? res.data : []
-        self.globalData.users = data
-      }
-    })
+    
   },
   globalData: {
     userInfo: null,
     data:1,
     items:[],
-    users: []
+    users: [],
+    userId: null
+  },
+  userInfoReadyCallback: function(re){
+    let self = this
+    wx.downloadFile({
+      url: re.userInfo.avatarUrl, 
+      success: function(res) {
+        if (res.statusCode === 200) {
+            wx.uploadFile({
+              url: 'https://eeserver.herokuapp.com/create_or_get_user',
+              filePath: res.tempFilePath,
+              name: 'profile',
+              formData:{
+                  name: re.userInfo.nickName
+              },
+              success: function(res){
+                  var data = res.data
+                  //do something
+                  self.globalData.userId = data.id
+                  console.log('res.data ',data)
+                  console.log('global ',self.globalData)
+              },
+              fail: function(res){
+                console.log(res)
+              }
+          })
+        }
+      }
+    })
   }
 })
