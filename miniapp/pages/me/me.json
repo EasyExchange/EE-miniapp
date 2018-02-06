@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "users-intro": "/components/users-intro/users-intro"
-  }
+  },
+  "navigationBarTitleText": "我的"
 }

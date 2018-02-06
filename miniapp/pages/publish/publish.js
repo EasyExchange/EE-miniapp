@@ -121,6 +121,7 @@ Page({
       },
       success: function(res){
         var data = res.data
+        console.log("...res ",res)
         //do something
         wx.hideToast()
         wx.showToast({
@@ -132,9 +133,9 @@ Page({
               wx.switchTab({
                 url: '/pages/me/me',
                 success: ()=>{
-                  // wx.navigateTo({
-                  //   url: '/pages/my-goods/my-goods'
-                  // })
+                  wx.navigateTo({
+                    url: '/pages/my-goods/my-goods'
+                  })
                 }
               })
             },1000)

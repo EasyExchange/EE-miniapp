@@ -39,8 +39,6 @@ App({
   globalData: {
     userInfo: null,
     data:1,
-    items:[],
-    users: [],
     user:{}
   },
   userInfoReadyCallback: function(re){

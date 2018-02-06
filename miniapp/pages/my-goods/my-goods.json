@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "goods-minicard": "/components/goods-minicard/goods-minicard"
-  }
+  },
+  "navigationBarTitleText": "我的发布"
 }

@@ -3,5 +3,6 @@
     "users-intro" : "/components/users-intro/users-intro",
     "message-card": "/components/message-card/message-card",
     "wxc-price": "/packages/@minui/wxc-price/dist/index"
-    }
+    },
+    "navigationBarTitleText": "详情"
 }

@@ -24,8 +24,8 @@ Component({
 
   },
   attached: function(){
-    if(!this.properties.user.src){
-      this.properties.user.src = '/images/'+this.properties.user.name+'.jpg'
-    }
+    // if(!this.properties.user.src){
+    //   this.properties.user.src = '/images/'+this.properties.user.name+'.jpg'
+    // }
   }
 })

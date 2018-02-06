@@ -1,14 +1,14 @@
 <!--components/message-minicard/message-minicard.wxml-->
-<view class='wrapper'>
-    <block wx:if="{{user.name}}">
-        <wxc-avatar src="/images/{{user.name}}.png" class='avatar'></wxc-avatar>
+<view class='wrapper' bindtap="showDetail">
+    <block wx:if="{{message.sender.name}}">
+        <wxc-avatar src="/images/{{message.sender.name}}.png" class='avatar'></wxc-avatar>
       </block>
       <block wx:else>
-          <wxc-avatar class='avatar avatarback'>{{user.name}}</wxc-avatar>
+          <wxc-avatar class='avatar avatarback'>{{message.sender.name}}</wxc-avatar>
       </block>
   <!-- <wxc-avatar class='avatar' src="/images/{{user.name}}.png"></wxc-avatar> -->
   <view class='content-wrapper'>
-    <view class='name'>{{message.user.name}}</view>
+    <view class='name'>{{message.sender.name}}</view>
     <view class='content'>{{message.content}}</view>
     <view class='time'>{{message.created_at}}</view>
   </view>

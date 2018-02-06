@@ -112,7 +112,7 @@ Page({
     let scrollTo = 1000
 
     wx.request({
-      url: 'https://eeserver.herokuapp.com/new_message',
+      url: 'https://eeserver.herokuapp.com/messages',
       data: {
         item_id: id,
         sender_id: app.globalData.user.id,

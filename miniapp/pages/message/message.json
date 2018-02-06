@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "message-minicard": "/components/message-minicard/message-minicard"
-  }
+  },
+  "navigationBarTitleText": "收到的消息"
 }

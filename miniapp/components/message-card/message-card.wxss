@@ -1,10 +1,12 @@
 /* components/message-card/message-card.wxss */
+.wrapper{
+  padding-top: 30rpx;
+}
 .avatar{
   display: inline-block;
   width: 100rpx;
   height: 100rpx;
   border-radius:50%;
-
   color: #FFF;
 }
 .avatarback{

@@ -69,8 +69,10 @@ Page({
     let data = e.detail.value
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/update',
+      method: 'PUT',
       data: {
-        user_id: app.globalData.user.id,
+        name: app.globalData.user.name,
+        id: app.globalData.user.id,
         tel: data.tel,
         address: data.address
       },

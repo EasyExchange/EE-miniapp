@@ -21,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    showDetail: function () {
+      let self = this;
+      wx.redirectTo({
+        url: '/pages/goods-info/goods-info?id='+self.data.message.item_id+'&scrollTo='+1000,
+      })
+  }
   }
 })

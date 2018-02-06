@@ -2,5 +2,6 @@
   "usingComponents": {
     "goods-card": "/components/goods-card/goods-card",
     "search": "/components/search-button/search-button"
-  }
+  },
+  "navigationBarTitleText": "首页"
 }

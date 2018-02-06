@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "img-uploader": "/components/img-uploader/img-uploader"
-  }
+  },
+  "navigationBarTitleText": "发布物品"
 }
