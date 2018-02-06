@@ -1,6 +1,12 @@
 <!--components/message-minicard/message-minicard.wxml-->
 <view class='wrapper'>
-  <wxc-avatar class='avatar'>{{message.user.name}}</wxc-avatar>
+    <block wx:if="{{user.name}}">
+        <wxc-avatar src="/images/{{user.name}}.png" class='avatar'></wxc-avatar>
+      </block>
+      <block wx:else>
+          <wxc-avatar class='avatar avatarback'>{{user.name}}</wxc-avatar>
+      </block>
+  <!-- <wxc-avatar class='avatar' src="/images/{{user.name}}.png"></wxc-avatar> -->
   <view class='content-wrapper'>
     <view class='name'>{{message.user.name}}</view>
     <view class='content'>{{message.content}}</view>

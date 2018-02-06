@@ -17,7 +17,7 @@ Page({
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/posted',
       data: {
-        id:app.globalData.useId
+        id:app.globalData.user.id
       },
       success: function(res) {
         self.setData({

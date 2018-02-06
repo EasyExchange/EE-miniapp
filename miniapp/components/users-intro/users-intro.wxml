@@ -1,6 +1,11 @@
 <!--components/users-intro/users-intro.wxml-->
 <view class='users-intro-wrapper'>
-  <wxc-avatar src="{{user.src}}" class='avatar'>{{user.name}}</wxc-avatar>
+  <block wx:if="{{user.name}}">
+    <wxc-avatar src="/images/{{user.name}}.png" class='avatar'></wxc-avatar>
+  </block>
+  <block wx:else>
+      <wxc-avatar class='avatar avatarback'>{{user.name}}</wxc-avatar>
+  </block>
   <view class='user-name'>{{user.name}}</view>
   <view class='user-address'>{{user.address}}</view>
 </view>

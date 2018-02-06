@@ -15,17 +15,16 @@ Page({
   onLoad: function (options) {
     let app = getApp()
     let globalData = app.globalData
-    let userInfo = globalData.userInfo
     let self = this
+    console.log(globalData)
 
     wx.request({
-      url: 'https://eeserver.herokuapp.com/users/'+1,
+      url: 'https://eeserver.herokuapp.com/users/'+globalData.user.id,
       success: function (res) {
         let data = res.data
         self.setData({
           userInfo : {
-            name : userInfo.nickName,
-            src: userInfo.avatarUrl,
+            name : data.name,
             tel : data.tel,
             address : data.address
           }

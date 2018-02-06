@@ -70,7 +70,7 @@ Page({
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/update',
       data: {
-        user_id: app.globalData.useId,
+        user_id: app.globalData.user.id,
         tel: data.tel,
         address: data.address
       },

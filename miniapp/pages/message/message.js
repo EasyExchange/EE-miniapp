@@ -21,7 +21,7 @@ Page({
     wx.request({
       url: 'https://eeserver.herokuapp.com/me/message',
       data: {
-        id:app.globalData.useId
+        id:app.globalData.user.id
       },
       success: function(res) {
         let messageData = res.data

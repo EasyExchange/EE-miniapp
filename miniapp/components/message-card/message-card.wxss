@@ -4,8 +4,11 @@
   width: 100rpx;
   height: 100rpx;
   border-radius:50%;
-  background: #FF0077;
+
   color: #FFF;
+}
+.avatarback{
+  background: #FF0077;
 }
 .name{
   display: inline-block;

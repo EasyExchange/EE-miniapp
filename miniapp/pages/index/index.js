@@ -89,29 +89,49 @@ Page({
       success: function (res) {
         let data = res.data ? res.data : []
         self.setData({
-          items: data
+          goodList: data
         },()=>{
-          wx.request({
-            url: 'https://eeserver.herokuapp.com/users',
-            success: function (res) {
-              let data = res.data ? res.data : []
-              self.setData({
-                users: data
-              },()=>{
-                let items = self.data.items
-                let users = self.data.users
-                let newItems = items.map(v=>{
-                  let newV = v
-                  newV.user = users[v.user_id-1]
-                  return newV
-                })
-                self.setData({
-                  goodList : newItems 
-                })
-              })
-            }
-          })
-        })
+          // let files = []
+          // self.data.goodList.forEach(element => {
+          //   let index = element.id
+          //   wx.downloadFile({
+          //     url: 'https://eeserver.herokuapp.com/picture?picture_name='+element.picture.url,
+          //     success: function (res) {
+          //       files[index] = res.tempFilePath
+          //     }
+          //   })
+          // })
+          // setTimeout(()=>{
+          //   let newGoodlist = self.data.goodList
+          //   newGoodlist.forEach(ele => {
+          //     ele.src = files[ele.id]
+          //     console.log(files)
+          //   })
+          //   self.setData({
+          //     goodList:newGoodlist
+          //   })
+          // },1000)
+
+          // wx.request({
+          //   url: 'https://eeserver.herokuapp.com/users',
+          //   success: function (res) {
+          //     let data = res.data ? res.data : []
+          //     self.setData({
+          //       users: data
+          //     },()=>{
+          //       let items = self.data.items
+          //       let users = self.data.users
+          //       let newItems = items.map(v=>{
+          //         let newV = v
+          //         newV.user = users[v.user_id-1]
+          //         return newV
+          //       })
+          //       self.setData({
+          //         goodList : newItems 
+          //       },()=>{
+              // })
+            })
+        // })
       }
     })
   }

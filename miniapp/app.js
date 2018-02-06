@@ -41,13 +41,14 @@ App({
     data:1,
     items:[],
     users: [],
-    userId: null
+    user:{}
   },
   userInfoReadyCallback: function(re){
     let self = this
     wx.downloadFile({
       url: re.userInfo.avatarUrl, 
       success: function(res) {
+        console.log(res)
         if (res.statusCode === 200) {
             wx.uploadFile({
               url: 'https://eeserver.herokuapp.com/create_or_get_user',
@@ -59,7 +60,7 @@ App({
               success: function(res){
                   var data = res.data
                   //do something
-                  self.globalData.userId = data.id
+                  self.globalData.user = JSON.parse(data)
                   console.log('res.data ',data)
                   console.log('global ',self.globalData)
               },

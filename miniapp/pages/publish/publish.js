@@ -114,7 +114,7 @@ Page({
       filePath: self.data.files[0],
       name: 'file',
       formData:{
-        user_id: app.globalData.useId,
+        user_id: app.globalData.user.id,
         name: data.inputTitle,
         detail: data.textarea,
         second_price: data.inputPrice

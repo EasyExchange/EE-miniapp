@@ -38,6 +38,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 1000;
   border-top: 1rpx solid #DDD;
   height: 100rpx;
   background-color: #FFF;
@@ -47,4 +48,23 @@
   height: 100rpx;
   line-height: 100rpx;
   text-align: center;
+}
+.leave-message{
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+}
+.message-input{
+  display: inline-block;
+  width: 70%;
+  height: 100rpx;
+  padding-left: 20rpx;
+  background-color: #EFEFEF;
+}
+.message-btn{
+  display: inline-block;
+  width: 20%;
+  height: 100rpx;
 }

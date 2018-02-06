@@ -22,6 +22,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    showDetail : function(){
+      let self = this;
+      wx.navigateTo({
+        url: '/pages/goods-info/goods-info?id='+self.data.good.id+'&scrollTo='+0,
+      })
+    }
   }
 })

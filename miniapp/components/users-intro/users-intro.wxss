@@ -9,8 +9,11 @@
   width: 100rpx;
   height: 100rpx;
   border-radius:50%;
-  background: #31b0d5;
+  /* background: #31b0d5; */
   color: #FFF;
+}
+.avatarback{
+  background: #31b0d5;
 }
 .user-name{
   display: inline-block;

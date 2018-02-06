@@ -14,8 +14,10 @@
   width: 100rpx;
   height: 100rpx;
   border-radius:50%;
-  background: #31b0d5;
   color: #FFF;
+}
+.avatarback{
+  background: #31b0d5;
 }
 .content-wrapper{
   display: inline-block;

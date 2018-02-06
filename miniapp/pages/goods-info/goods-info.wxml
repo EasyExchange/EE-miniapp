@@ -7,16 +7,20 @@
     <wxc-price value="{{good.second_price}}" decimal="small"></wxc-price>
   </view>
   <view class='details'>{{good.detail}}</view>
-  <image src='' class='image'></image>
+  <image src='/images/{{good.name}}.png' class='image'></image>
 </view>
 <view class='message-wrapper'>
   <view class='message-title'>留言</view>
+  <view class="leave-message">
+    <input class="message-input" placeholder="说两句" bindinput="inputMessage" bindconfirm="confirmMessage"></input>
+    <button class="message-btn" bindtap="confirmMessage">发送</button>
+  </view>
   <view class='message-content'>
     <block wx:for="{{good.messages}}" wx:for-item="message" wx:key="id">
       <message-card message='{{message}}'></message-card>
     </block>
   </view>
 </view>
-<view class='tab-bar'>
-  <view class='comment'>留言</view>
+<view wx:if="{{isPublisher}}" class='tab-bar'>
+  <view class='comment'>下架</view>
 </view>

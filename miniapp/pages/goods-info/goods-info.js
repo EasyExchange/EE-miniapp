@@ -1,4 +1,6 @@
 // pages/goods-info/goods-info.js
+const app = getApp()
+let id
 Page({
 
   /**
@@ -6,7 +8,8 @@ Page({
    */
   data: {
     good: {
-    }
+    },
+    isPublisher : false
   },
 
   /**
@@ -16,29 +19,34 @@ Page({
     // this.setData({
     //   good: wx.getStorageSync('nowGood')
     // })
-    let id = options.id
+    id = options.id
+    let scro = options.scrollTo
     let self = this
-    let app = getApp()
-    let globalData = app.globalData
-    let users = globalData.users
+    let uId = app.globalData.user.id
+    let user_id
 
     wx.request({
       url: 'https://eeserver.herokuapp.com/items/' + id,
-      data: {
-      },
       success: function (res) {
         let data = res.data ? res.data : []
-        let messages = data.messages
+        user_id = data.user_id
+        // let messages = data.messages
 
-        let newMessages = messages.map(v => {
-          let newV = v
-          newV.sender = users[v.sender_id - 1]
-          return newV
-        })
+        // let newMessages = messages.map(v => {
+        //   let newV = v
+        //   newV.sender = users[v.sender_id - 1]
+        //   return newV
+        // })
 
-        data.messages = newMessages
+        // data.messages = newMessages
         self.setData({
-          good: data
+          good: data,
+          isPublisher: user_id == uId
+        },()=>{
+          wx.pageScrollTo({
+            scrollTop: scro,
+            duration: 300
+          })
         })
       }
     })
@@ -92,5 +100,32 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  inputMessage: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  confirmMessage: function (e) {
+    let inputValue = this.data.inputValue
+    let self = this
+    let scrollTo = 1000
+
+    wx.request({
+      url: 'https://eeserver.herokuapp.com/new_message',
+      data: {
+        item_id: id,
+        sender_id: app.globalData.user.id,
+        receiver_id: self.data.good.user_id,
+        content: inputValue
+      },
+      method:'POST',
+      success: function(res) {
+        wx.redirectTo({
+          url: '/pages/goods-info/goods-info?id='+id+'&scrollTo='+scrollTo
+        })
+        console.log(res.data)
+      }
+    })
   }
 })

@@ -29,7 +29,7 @@ Component({
       //   console.log("set strorage error:"+ e);
       // }
       wx.navigateTo({
-        url: '/pages/goods-info/goods-info?id='+self.data.good.id,
+        url: '/pages/goods-info/goods-info?id='+self.data.good.id+'&scrollTo='+0,
       })
     }
   }
